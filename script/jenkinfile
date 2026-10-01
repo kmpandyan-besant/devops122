@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages{
+        stage("clone"){
+            steps{
+                git 'https://github.com/kmpandyan-besant/devops122a.git'
+            }
+        }
+        stage("rename"){
+            steps{
+                sh 'mv icici ucobank'
+            }
+        }
+    }
+}
